@@ -149,6 +149,19 @@
   \usebibmacro{finentry}%
 }
 
+\DeclareBibliographyDriver{thesis}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \printnames{author}
+  \setunit*{\addcolon\space}
+  \printfield{title}%
+  \newunit
+  \printfield{institution}%
+  \printfield{year}
+  \usebibmacro{related}
+  \usebibmacro{finentry}}
+
 \DeclareBibliographyDriver{inproceedings}{%
   \usebibmacro{bibindex}%
   \usebibmacro{begentry}%
